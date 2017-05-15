@@ -41,4 +41,9 @@ class ThemeHomeController extends Controller {
 		return View::make('Theme::home', $data);
 	}
 
+	public function joinfestival()
+	{
+		return View::make('Theme::joinfestival');
+	}
+
 }

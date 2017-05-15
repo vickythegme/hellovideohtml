@@ -28,10 +28,9 @@ class HomeController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function joinfestival()
 	{
-		return view('home');
+		return view('joinfestival');
 	}
-    
 
 }

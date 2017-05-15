@@ -10,6 +10,7 @@ Route::group(array('before' => 'if_logged_in_must_be_subscribed'), function(){
 	*/
 
 		Route::get('/', 'ThemeHomeController@index');
+		Route::get('joinfestival', 'ThemeHomeController@joinfestival');
 
 	/*
 	|--------------------------------------------------------------------------
@@ -109,6 +110,7 @@ Route::get('upgrade', 'UpgradeController@upgrade');
 Route::get('upload_dir', function(){
 	echo Config::get('site.uploads_dir');
 });
+
 /*
 |--------------------------------------------------------------------------
 | Admin Routes
