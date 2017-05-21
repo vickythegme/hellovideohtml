@@ -1734,5 +1734,21 @@ Navbar Toggle
   background-color: #fff!important;
 }
 
-
-
+#user-badge h2 {
+  font-size: 16px;    
+  padding-top: 0;
+  text-transform: uppercase;
+}
+.share_link {
+  padding-right: 7px;
+}
+.share_link label {
+  padding: 4px 0!important;
+}
+.btn_position {
+      float: right;
+      top: 0px;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+}

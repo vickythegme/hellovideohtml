@@ -5,14 +5,31 @@
 	<?php if(isset($type) && $type == 'profile'): ?>
 
 		<div id="user-badge">
-			<img src="<?= Config::get('site.uploads_url') . 'avatars/' . $user->avatar ?>" />
-			<h2 class="form-signin-heading"><?= $user->username ?></h2>
-			<div class="label label-info"><?= ucfirst($user->role) ?> User</div>
-			<p class="member-since">Member since: <?= $user->created_at ?></p>
+			<div class="row">
+				<div class="col-md-6 col-sm-6">
+					<img src="<?= Config::get('site.uploads_url') . 'avatars/' . $user->avatar ?>" />
+					<h2 class="form-signin-heading"><?= $user->username ?></h2>
+					<p class="member-since">Works at Assitant Director</p>
+					<p class="member-since">Lives in Trivandrum</p>
 
-			<?php if(!Auth::guest() && Auth::user()->username == $user->username): ?>
-				<a href="<?= ($settings->enable_https) ? secure_url('user') : URL::to('user') ?><?= '/' . $user->username . '/edit' ?>" class="btn btn-info"><i class="fa fa-edit"></i> Edit</a>
-			<?php endif; ?>
+					<?php if(!Auth::guest() && Auth::user()->username == $user->username): ?>
+						<a href="<?= ($settings->enable_https) ? secure_url('user') : URL::to('user') ?><?= '/' . $user->username . '/edit' ?>" class="btn_position btn btn_festival"><i class="fa fa-edit"></i> Edit</a>
+					<?php endif; ?>
+				</div>
+				<div class="col-md-6 col-sm-6">
+				<?php if(!Auth::guest() && Auth::user()->username == $user->username): ?>
+					<form class="share_link">
+						<div class="form-group">
+							<label>Share a Video Link</label>
+							<textarea class="form-control"></textarea>
+						</div>
+						<div class="form-group text-right">
+							<button class="btn btn-primary btn_festival">Share</button>
+						</div>
+					</form>
+				<?php endif; ?>
+				</div>
+			</div>
 		</div>
 
 		<h2><?= ucfirst($user->username) ?>'s Favorites </h2>
@@ -49,6 +66,16 @@
 				<?php if($errors->first('email')): ?><div class="alert alert-danger"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button> <strong>Oh snap!</strong> <?= $errors->first('email'); ?></div><?php endif; ?>
 				<label for="email">Email</label>
 				<input type="text" class="form-control" name="email" id="email" value="<?php if(!empty($user->email)): ?><?= $user->email ?><?php endif; ?>" />
+			</div>
+
+			<div class="well">
+				<label for="">Works at</label>
+				<input type="text" class="form-control" value="" />
+			</div>
+
+			<div class="well">
+				<label for="">Lives in</label>
+				<input type="text" class="form-control" value="" />
 			</div>
 
 			<div class="well">
