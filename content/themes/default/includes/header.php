@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	
+
     <?php include('head.php'); ?>
 
 </head>
@@ -21,16 +21,16 @@
             <div class="collapse navbar-collapse right" id="bs-example-navbar-collapse-1">
 
                 <ul class="nav navbar-nav navbar-left">
-                    <li><a href="videos"><i class="hv-video"></i> Videos</a></li>
-                    <li><a href="posts"><i class="hv-book"></i> Articles</a></li>
+                    <li><a href="<?= URL::to('videos'); ?>"><i class="hv-video"></i> Videos</a></li>
+                    <li><a href="<?= URL::to('posts'); ?>"><i class="hv-book"></i> Articles</a></li>
                 </ul>
 
                 <ul class="nav navbar-nav navbar-right">
                     
                     <?php if(Auth::guest()): ?>
                         
-                        <li class="login-desktop"><a href="/login"><i class="fa fa-lock"></i> Login</a></li>
-                        <li class="signup-desktop"><a href="/signup"> Signup</a></li>
+                        <li class="login-desktop"><a href="<?= URL::to('/login'); ?>"><i class="fa fa-lock"></i> Login</a></li>
+                        <li class="signup-desktop"><a href="<?= URL::to('/signup');?>"> Signup</a></li>
                     
                     <?php else: ?>
                         

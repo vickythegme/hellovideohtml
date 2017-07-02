@@ -57,7 +57,7 @@ if(!function_exists('generate_menu')):
 				}
 
 				$output .= '<li class="dropdown' . $active . '">';
-					$output .= '<a href="/videos" class="dropdown-toggle">' . $menu_item->name . ' <span class="caret"></span></a>';
+					$output .= '<a href="'.URL::to("/videos").'" class="dropdown-toggle">' . $menu_item->name . ' <span class="caret"></span></a>';
 					
 						$output .= '<ul class="dropdown-menu multi-level" role="menu">';
 						$output .= generate_video_post_menu(VideoCategory::orderBy('order', 'ASC')->get(), '/videos/category/');
@@ -76,7 +76,7 @@ if(!function_exists('generate_menu')):
 				}
 
 				$output .= '<li class="dropdown' . $active . '">';
-					$output .= '<a href="/posts" class="dropdown-toggle">' . $menu_item->name . ' <span class="caret"></span></a>';
+					$output .= '<a href="'.URL::to("/posts").'" class="dropdown-toggle">' . $menu_item->name . ' <span class="caret"></span></a>';
 					
 						$output .= '<ul class="dropdown-menu multi-level" role="menu">';
 						$output .= generate_video_post_menu(PostCategory::orderBy('order', 'ASC')->get(), '/posts/category/');
@@ -113,7 +113,7 @@ if(!function_exists('generate_menu')):
 
 				$output .= '<li'. $li_class . '>';
 
-				$output .= '<a href="' . $menu_item->url .'"' . $dropdown_toggle . '>' . $menu_item->name . $caret . '</a>';
+				$output .= '<a href="' . URL::to("$menu_item->url") .'"' . $dropdown_toggle . '>' . $menu_item->name . $caret . '</a>';
 
 				if($hasChildren):
 					$output .= '<ul class="dropdown-menu multi-level" role="menu">';
@@ -129,7 +129,6 @@ if(!function_exists('generate_menu')):
 		return $output;
 
 	}
-
 endif;
 
 
@@ -174,7 +173,7 @@ if(!function_exists('generate_video_post_menu')):
 
 				$output .= '<li'. $li_class . '>';
 
-				$output .= '<a href="' . $link_prefix . $menu_item->slug .'"' . $dropdown_toggle . '>' . $menu_item->name . '</a>';
+				$output .= '<a href="' . URL::to("$link_prefix$menu_item->slug") .'"' . $dropdown_toggle . '>' . $menu_item->name . '</a>';
 
 				if($hasChildren):
 					$output .= '<ul class="dropdown-menu multi-level" role="menu">';

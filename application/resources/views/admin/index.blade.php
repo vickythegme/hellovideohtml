@@ -1,7 +1,6 @@
 @extends('admin.master')
 
 @section('content')
-		
   <!--[hook_admin_dashboard_widgets_start]-->
 		
 		<div class="row">
@@ -327,7 +326,7 @@
                 }
               ]
             };
-
+ 
             new Chart(makeCanvas('chart-1-container')).Line(data);
             generateLegend('legend-1-container', data.datasets);
           });

@@ -13,16 +13,16 @@
 
 	<title>{{ $settings->website_name . ' - ' . $settings->website_description }}</title>
 
-	<link rel="stylesheet" href="{{ '/application/assets/admin/js/jquery-ui/css/no-theme/jquery-ui-1.10.3.custom.min.css' }}">
-	<link rel="stylesheet" href="{{ '/application/assets/admin/css/font-icons/entypo/css/entypo.css' }}">
-	<link rel="stylesheet" href="{{ '/application/assets/admin/css/font-icons/font-awesome/css/font-awesome.min.css' }}">
+	<link rel="stylesheet" href="{{ URL::to('/application/assets/admin/js/jquery-ui/css/no-theme/jquery-ui-1.10.3.custom.min.css') }}">
+	<link rel="stylesheet" href="{{ URL::to('/application/assets/admin/css/font-icons/entypo/css/entypo.css') }}">
+	<link rel="stylesheet" href="{{ URL::to('/application/assets/admin/css/font-icons/font-awesome/css/font-awesome.min.css') }}">
 	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic">
-	<link rel="stylesheet" href="{{ '/application/assets/admin/css/bootstrap.css' }}">
-	<link rel="stylesheet" href="{{ '/application/assets/admin/css/animate.min.css' }}">
-	<link rel="stylesheet" href="{{ '/application/assets/admin/css/core.css' }}">
-	<link rel="stylesheet" href="{{ '/application/assets/admin/css/theme.css' }}">
-	<link rel="stylesheet" href="{{ '/application/assets/admin/css/forms.css' }}">
-	<link rel="stylesheet" href="{{ '/application/assets/admin/css/custom.css' }}">
+	<link rel="stylesheet" href="{{ URL::to('/application/assets/admin/css/bootstrap.css') }}">
+	<link rel="stylesheet" href="{{ URL::to('/application/assets/admin/css/animate.min.css') }}">
+	<link rel="stylesheet" href="{{ URL::to('/application/assets/admin/css/core.css') }}">
+	<link rel="stylesheet" href="{{ URL::to('/application/assets/admin/css/theme.css') }}">
+	<link rel="stylesheet" href="{{ URL::to('/application/assets/admin/css/forms.css') }}">
+	<link rel="stylesheet" href="{{ URL::to('/application/assets/admin/css/custom.css') }}">
 
 	<?php $favicon = (isset($settings->favicon) && trim($settings->favicon) != "") ? $settings->favicon : '/favicon.png'; ?>
 	<link rel="icon" href="<?= Config::get('site.uploads_dir') . '/settings/' . $favicon ?>" type="image/x-icon">
@@ -30,13 +30,13 @@
 
 	@yield('css')
 
-	<script src="{{ '/application/assets/admin/js/jquery-1.11.0.min.js' }}"></script>
-	<script src="{{ '/application/assets/admin/js/bootstrap-colorpicker.min.js' }}" id="script-resource-13"></script>
-	<script src="{{ '/application/assets/admin/js/vue.min.js' }}"></script>
+	<script src="{{ URL::to('/application/assets/admin/js/jquery-1.11.0.min.js') }}"></script>
+	<script src="{{ URL::to('/application/assets/admin/js/bootstrap-colorpicker.min.js') }}" id="script-resource-13"></script>
+	<script src="{{ URL::to('/application/assets/admin/js/vue.min.js') }}"></script>
 	
 	<script>$.noConflict();</script>
 
-	<!--[if lt IE 9]><script src="{{ '/application/assets/admin/js/ie8-responsive-file-warning.js' }}"></script><![endif]-->
+	<!--[if lt IE 9]><script src="{{ URL::to('/application/assets/admin/js/ie8-responsive-file-warning.js') }}"></script><![endif]-->
 
 	<!-- HTML5 shim and Respond.js') }} IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
@@ -49,7 +49,7 @@
 <body class="page-body skin-black">
 
 <a href="{{ URL::to('/') }}" class="top-left-logo">
-	<img src="{{ '/application/assets/admin/images/hv-tv.png' }}" />
+	<img src="{{ URL::to('/application/assets/admin/images/hv-tv.png') }}" />
 </a>
 
 <div class="page-container sidebar-collapsed"><!-- add class "sidebar-collapsed" to close sidebar by default, "chat-visible" to make chat appear always -->
@@ -375,36 +375,35 @@
 
 
 
-
 	<!-- Imported styles on this page -->
-	<link rel="stylesheet" href="{{ '/application/assets/admin/js/jvectormap/jquery-jvectormap-1.2.2.css' }}">
-	<link rel="stylesheet" href="{{ '/application/assets/admin/js/rickshaw/rickshaw.min.css' }}">
+	<link rel="stylesheet" href="{{ URL::to('/application/assets/admin/js/jvectormap/jquery-jvectormap-1.2.2.css') }}">
+	<link rel="stylesheet" href="{{ URL::to('/application/assets/admin/js/rickshaw/rickshaw.min.css') }}">
 
 	<!-- Bottom scripts (common) -->
-	<script src="{{ '/application/assets/admin/js/gsap/main-gsap.js' }}"></script>
-	<script src="{{ '/application/assets/admin/js/jquery-ui/js/jquery-ui-1.10.3.minimal.min.js' }}"></script>
-	<script src="{{ '/application/assets/admin/js/bootstrap.js' }}"></script>
-	<script src="{{ '/application/assets/admin/js/joinable.js' }}"></script>
-	<script src="{{ '/application/assets/admin/js/resizeable.js' }}"></script>
-	<script src="{{ '/application/assets/admin/js/jvectormap/jquery-jvectormap-1.2.2.min.js' }}"></script>
+	<script src="{{ URL::to('/application/assets/admin/js/gsap/main-gsap.js') }}"></script>
+	<script src="{{ URL::to('/application/assets/admin/js/jquery-ui/js/jquery-ui-1.10.3.minimal.min.js') }}"></script>
+	<script src="{{ URL::to('/application/assets/admin/js/bootstrap.js') }}"></script>
+	<script src="{{ URL::to('/application/assets/admin/js/joinable.js') }}"></script>
+	<script src="{{ URL::to('/application/assets/admin/js/resizeable.js') }}"></script>
+	<script src="{{ URL::to('/application/assets/admin/js/jvectormap/jquery-jvectormap-1.2.2.min.js') }}"></script>
 
 
 	<!-- Imported scripts on this page -->
-	<script src="{{ '/application/assets/admin/js/jvectormap/jquery-jvectormap-europe-merc-en.js' }}"></script>
-	<script src="{{ '/application/assets/admin/js/jquery.sparkline.min.js' }}"></script>
-	<script src="{{ '/application/assets/admin/js/rickshaw/vendor/d3.v3.js' }}"></script>
-	<script src="{{ '/application/assets/admin/js/rickshaw/rickshaw.min.js' }}"></script>
-	<script src="{{ '/application/assets/admin/js/raphael-min.js' }}"></script>
-	<script src="{{ '/application/assets/admin/js/morris.min.js' }}"></script>
-	<script src="{{ '/application/assets/admin/js/toastr.js' }}"></script>
+	<script src="{{ URL::to('/application/assets/admin/js/jvectormap/jquery-jvectormap-europe-merc-en.js') }}"></script>
+	<script src="{{ URL::to('/application/assets/admin/js/jquery.sparkline.min.js') }}"></script>
+	<script src="{{ URL::to('/application/assets/admin/js/rickshaw/vendor/d3.v3.js') }}"></script>
+	<script src="{{ URL::to('/application/assets/admin/js/rickshaw/rickshaw.min.js') }}"></script>
+	<script src="{{ URL::to('/application/assets/admin/js/raphael-min.js') }}"></script>
+	<script src="{{ URL::to('/application/assets/admin/js/morris.min.js') }}"></script>
+	<script src="{{ URL::to('/application/assets/admin/js/toastr.js') }}"></script>
 
 
 	<!-- JavaScripts initializations and stuff -->
-	<script src="{{ '/application/assets/admin/js/custom.js' }}"></script>
+	<script src="{{ URL::to('/application/assets/admin/js/custom.js') }}"></script>
 
 
 	<!-- Demo Settings -->
-	<script src="{{ '/application/assets/admin/js/main.js' }}"></script>
+	<script src="{{ URL::to('/application/assets/admin/js/main.js') }}"></script>
 
 	<!-- Notifications -->
 	<script>
